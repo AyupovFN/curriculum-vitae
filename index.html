@@ -8,13 +8,14 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
-  <title>CV Farkhat Ayupov</title>
+  <title>CV Farkhat Ayupov — Ruby Backend Developer</title>
+  <meta name="description" content="Ruby on Rails Backend Developer, 6+ years, API integrations, REST, SOAP, Redis, ElasticSearch, Docker">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; background: #f5f5f5; }
     .page { max-width: 860px; margin: 30px auto; background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
     .header { background: linear-gradient(135deg, #2c5282, #2b6cb0); color: #fff; padding: 40px; display: flex; align-items: center; gap: 30px; position: relative; }
-    .header img { width: 130px; height: 170px; border-radius: 8px; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); }
+    .header img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); }
     .header-info h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
     .header-info h2 { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
     .header-contacts { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; }
@@ -26,23 +27,27 @@
     .lang-switch button.active { background: rgba(255,255,255,0.35); font-weight: 600; }
     .lang-switch button:hover { background: rgba(255,255,255,0.25); }
     .content { padding: 30px 40px 40px; }
-    .section { margin-bottom: 28px; }
-    .section-title { font-size: 15px; font-weight: 700; color: #2c5282; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; margin-bottom: 14px; }
-    .section p, .section li { font-size: 14px; }
+    .section { margin-bottom: 24px; }
+    .section-title { font-size: 14px; font-weight: 700; color: #2c5282; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; margin-bottom: 12px; }
+    .section p, .section li { font-size: 13.5px; }
     .section ul { padding-left: 20px; }
-    .section li { margin-bottom: 4px; }
-    .job { margin-bottom: 20px; }
-    .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+    .section li { margin-bottom: 3px; }
+    .subsection-title { font-size: 13px; font-weight: 600; color: #4a5568; margin: 10px 0 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .job { margin-bottom: 18px; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
     .job-title { font-size: 15px; font-weight: 600; color: #1a1a1a; }
     .job-period { font-size: 13px; color: #718096; }
-    .job-company { font-size: 14px; color: #4a5568; margin-bottom: 8px; }
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 16px; }
-    .skill-tag { font-size: 13px; background: #edf2f7; color: #2d3748; padding: 3px 10px; border-radius: 4px; }
-    .summary-text { font-size: 14px; color: #4a5568; }
+    .job-company { font-size: 13.5px; color: #4a5568; margin-bottom: 6px; }
+    .job-scale { font-size: 13px; color: #718096; margin-bottom: 10px; font-style: italic; }
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 5px 8px; }
+    .skill-tag { font-size: 12px; background: #edf2f7; color: #2d3748; padding: 2px 8px; border-radius: 4px; }
+    .summary-text { font-size: 13.5px; color: #4a5568; }
+    .keywords { font-size: 12px; color: #a0aec0; margin-top: 16px; line-height: 1.4; }
     @media print {
       body { background: #fff; }
       .page { box-shadow: none; margin: 0; border-radius: 0; }
       .lang-switch { display: none; }
+      .keywords { display: none; }
     }
     @media (max-width: 600px) {
       .header { flex-direction: column; text-align: center; padding: 25px; }
@@ -72,6 +77,7 @@
           <span><i class="fa fa-map-marker"></i>
             <span data-ru="Черногория (Remote) | ИП Армения" data-en="Montenegro (Remote) | Sole Proprietor (Armenia)">Черногория (Remote) | ИП Армения</span>
           </span>
+          <span><i class="fa fa-clock-o"></i>UTC+1</span>
         </div>
       </div>
     </div>
@@ -79,21 +85,22 @@
     <!-- CONTENT -->
     <div class="content">
 
-      <!-- SUMMARY -->
+      <!-- INTRODUCTION -->
       <div class="section">
-        <div class="section-title" data-ru="О себе" data-en="Summary">О себе</div>
-        <p class="summary-text" data-ru="Ruby on Rails backend-разработчик с 6+ годами коммерческого опыта (с 2019). Последние 5 лет — разработка и поддержка высоконагруженной агрегаторной платформы аренды автомобилей. Специализация: интеграции с внешними API (REST, SOAP), построение пайплайнов обработки данных, подключение новых провайдеров. Реализовал 20+ провайдерских интеграций с нуля."
-           data-en="Ruby on Rails backend developer with 6+ years of commercial experience (since 2019). Last 5 years — building and maintaining a high-traffic car rental aggregation platform. Specialize in third-party API integrations (REST, SOAP), data transformation pipelines, and provider onboarding. Built 20+ provider integrations from scratch.">
-          Ruby on Rails backend-разработчик с 6+ годами коммерческого опыта (с 2019). Последние 5 лет — разработка и поддержка высоконагруженной агрегаторной платформы аренды автомобилей. Специализация: интеграции с внешними API (REST, SOAP), построение пайплайнов обработки данных, подключение новых провайдеров. Реализовал 20+ провайдерских интеграций с нуля.
+        <div class="section-title" data-ru="Введение" data-en="Introduction">Введение</div>
+        <p class="summary-text"
+           data-ru="Backend-разработчик с 6+ годами коммерческого опыта. Последние 5 лет — ключевой разработчик интеграционного ядра в международной платформе аренды автомобилей: 40+ стран, 50+ провайдеров, ~10 000 бронирований в месяц. В команде из 2 backend-разработчиков закрываю полный цикл — от проектирования интеграций и написания кода до тестирования, деплоя и мониторинга в production. Умею работать с legacy-кодобазой (Ruby 2.3 / Rails 4, 10+ лет), адаптируя новую функциональность под существующую архитектуру без рефакторинга всего приложения."
+           data-en="Backend developer with 6+ years of commercial experience. Last 5 years — key developer of the integration core in an international car rental platform: 40+ countries, 50+ providers, ~10,000 bookings/month. In a team of 2 backend developers, I own the full cycle — from designing integrations and writing code to testing, deployment, and production monitoring. Skilled at working with a legacy codebase (Ruby 2.3 / Rails 4, 10+ years old), adapting new functionality to existing architecture without full-scale refactoring.">
+          Backend-разработчик с 6+ годами коммерческого опыта. Последние 5 лет — ключевой разработчик интеграционного ядра в международной платформе аренды автомобилей: 40+ стран, 50+ провайдеров, ~10 000 бронирований в месяц. В команде из 2 backend-разработчиков закрываю полный цикл — от проектирования интеграций и написания кода до тестирования, деплоя и мониторинга в production. Умею работать с legacy-кодобазой (Ruby 2.3 / Rails 4, 10+ лет), адаптируя новую функциональность под существующую архитектуру без рефакторинга всего приложения.
         </p>
       </div>
 
-      <!-- SKILLS -->
+      <!-- TECHNOLOGIES -->
       <div class="section">
-        <div class="section-title" data-ru="Навыки" data-en="Skills">Навыки</div>
+        <div class="section-title" data-ru="Технологии" data-en="Technologies">Технологии</div>
         <div class="skills-grid">
-          <span class="skill-tag">Ruby</span>
-          <span class="skill-tag">Rails</span>
+          <span class="skill-tag">Ruby 2.3–3.x</span>
+          <span class="skill-tag">Rails 4 / 5</span>
           <span class="skill-tag">MySQL</span>
           <span class="skill-tag">PostgreSQL</span>
           <span class="skill-tag">Redis</span>
@@ -101,13 +108,20 @@
           <span class="skill-tag">REST API</span>
           <span class="skill-tag">SOAP / Savon</span>
           <span class="skill-tag">Faraday</span>
-          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">JWT / OAuth</span>
+          <span class="skill-tag">XML / JSON</span>
           <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Docker Compose</span>
+          <span class="skill-tag">QEMU</span>
           <span class="skill-tag">Capistrano</span>
-          <span class="skill-tag">Git / GitLab CI</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitLab CI/CD</span>
           <span class="skill-tag">RSpec</span>
           <span class="skill-tag">Sidekiq</span>
-          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Telegram Bot API</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Nginx</span>
+          <span class="skill-tag">SAP ABAP</span>
         </div>
       </div>
 
@@ -115,43 +129,59 @@
       <div class="section">
         <div class="section-title" data-ru="Опыт работы" data-en="Experience">Опыт работы</div>
 
-        <!-- LocalRent -->
+        <!-- Main project -->
         <div class="job">
           <div class="job-header">
-            <span class="job-title">Backend Developer — LocalRent (localrent.com)</span>
+            <span class="job-title" data-ru="Backend-разработчик — Международная платформа аренды автомобилей" data-en="Backend Developer — International Car Rental Platform">Backend-разработчик — Международная платформа аренды автомобилей</span>
             <span class="job-period">2021 — <span data-ru="наст. время" data-en="Present">наст. время</span></span>
           </div>
-          <div class="job-company" data-ru="Международная агрегаторная платформа аренды автомобилей — одновременный поиск по 50+ провайдерам, агрегация результатов, полный цикл бронирования."
-               data-en="International car rental aggregation platform — searches 50+ providers simultaneously, aggregates results, handles full booking lifecycle.">
-            Международная агрегаторная платформа аренды автомобилей — одновременный поиск по 50+ провайдерам, агрегация результатов, полный цикл бронирования.
-          </div>
+          <p class="job-scale"
+             data-ru="Масштаб: 40+ стран, 50+ провайдеров проката, ~10 000 бронирований/мес. Команда: 2 backend-разработчика + product manager. Кодобаза: 10+ лет, Ruby 2.3 / Rails 4, монолит."
+             data-en="Scale: 40+ countries, 50+ rental providers, ~10,000 bookings/mo. Team: 2 backend devs + product manager. Codebase: 10+ years old, Ruby 2.3 / Rails 4, monolith.">
+            Масштаб: 40+ стран, 50+ провайдеров проката, ~10 000 бронирований/мес. Команда: 2 backend-разработчика + product manager. Кодобаза: 10+ лет, Ruby 2.3 / Rails 4, монолит.
+          </p>
+
+          <!-- Responsibilities -->
+          <div class="subsection-title" data-ru="Обязанности" data-en="Responsibilities">Обязанности</div>
           <ul>
-            <li data-ru="Спроектировал и реализовал 20+ интеграций с провайдерами (REST и SOAP API): поиск, расчёт стоимости, бронирование, отмена, мониторинг"
-                data-en="Designed and implemented 20+ provider integrations (REST and SOAP APIs): search, rate calculation, reservation, cancellation, monitoring">Спроектировал и реализовал 20+ интеграций с провайдерами (REST и SOAP API): поиск, расчёт стоимости, бронирование, отмена, мониторинг</li>
-            <li data-ru="Создал универсальный фреймворк интеграции с базовыми классами (Gateway, Request, Transformer, Rate), ускоряющий подключение новых провайдеров"
-                data-en="Built reusable integration framework (Gateway, Request, Transformer, Rate base classes) enabling faster provider onboarding">Создал универсальный фреймворк интеграции с базовыми классами (Gateway, Request, Transformer, Rate), ускоряющий подключение новых провайдеров</li>
-            <li data-ru="Разработал систему мерджинга тарифов: сопоставление внешних API-данных с внутренним каталогом автомобилей (цены, депозиты, франшизы, дополнительные услуги)"
-                data-en="Developed rate merging system matching external API data with internal car catalog (pricing, deposits, franchises, extras)">Разработал систему мерджинга тарифов: сопоставление внешних API-данных с внутренним каталогом автомобилей (цены, депозиты, франшизы, дополнительные услуги)</li>
-            <li data-ru="Реализовал Redis-кеширование токенов авторизации и результатов поиска для оптимизации работы при высокой конкурентности запросов"
-                data-en="Implemented Redis-based caching for auth tokens and search results to optimize performance under concurrent load">Реализовал Redis-кеширование токенов авторизации и результатов поиска для оптимизации работы при высокой конкурентности запросов</li>
-            <li data-ru="Диагностировал и исправлял production-баги конкурентного доступа: коллизии токенов в Redis, race conditions при параллельных поисках"
-                data-en="Diagnosed and fixed production concurrency bugs: token collisions in Redis, race conditions in parallel searches">Диагностировал и исправлял production-баги конкурентного доступа: коллизии токенов в Redis, race conditions при параллельных поисках</li>
-            <li data-ru="Настроил систему таймаутов поиска для разных стран и провайдеров"
-                data-en="Configured per-country and per-provider search timeout system">Настроил систему таймаутов поиска для разных стран и провайдеров</li>
-            <li data-ru="Разработал систему Telegram-уведомлений для бронирований со сложной логикой оповещений (авторизация, маршрутизация по получателям, форматирование данных)"
-                data-en="Built Telegram notification system for bookings with complex alerting logic (auth, recipient routing, data formatting)">Разработал систему Telegram-уведомлений для бронирований со сложной логикой оповещений (авторизация, маршрутизация по получателям, форматирование данных)</li>
-            <li data-ru="Создал микросервис уведомлений о деплоях: интеграция с GitLab API, changelog, standalone Ruby + Docker"
-                data-en="Created deploy notification microservice: GitLab API integration, changelog, standalone Ruby + Docker">Создал микросервис уведомлений о деплоях: интеграция с GitLab API, changelog, standalone Ruby + Docker</li>
-            <li data-ru="Поддерживал и оптимизировал legacy SOAP-интеграции (Savon) параллельно с современными REST-провайдерами"
-                data-en="Maintained and optimized legacy SOAP integrations (Savon) alongside modern REST providers">Поддерживал и оптимизировал legacy SOAP-интеграции (Savon) параллельно с современными REST-провайдерами</li>
-            <li data-ru="Интегрировал ElasticSearch для поиска по автомобилям и локациям"
-                data-en="Integrated ElasticSearch for car and location search functionality">Интегрировал ElasticSearch для поиска по автомобилям и локациям</li>
-            <li data-ru="Настроил dev-среду legacy Ruby 2.3 / Rails 4 через Docker на ARM (Apple Silicon) — QEMU, кастомная сборка образов"
-                data-en="Set up legacy Ruby 2.3 / Rails 4 dev environment on ARM (Apple Silicon) via Docker — QEMU cross-compilation, custom image builds">Настроил dev-среду legacy Ruby 2.3 / Rails 4 через Docker на ARM (Apple Silicon) — QEMU, кастомная сборка образов</li>
-            <li data-ru="Провайдеры из Турции, Греции, Испании, Исландии и других рынков — каждый со своей спецификой API"
-                data-en="Worked with providers across Turkey, Greece, Spain, Iceland and other markets — each with unique API specs">Провайдеры из Турции, Греции, Испании, Исландии и других стран — каждый со своей спецификой API</li>
+            <li data-ru="Полный цикл интеграции провайдеров: проектирование, разработка, тестирование, деплой, мониторинг — без выделенного QA и DevOps"
+                data-en="Full provider integration cycle: design, development, testing, deployment, monitoring — no dedicated QA or DevOps">Полный цикл интеграции провайдеров: проектирование, разработка, тестирование, деплой, мониторинг — без выделенного QA и DevOps</li>
+            <li data-ru="Взаимодействие с техническими командами 20+ провайдеров из 12+ стран: согласование API-контрактов, отладка на стейдже, эскалация багов на стороне провайдера"
+                data-en="Collaboration with technical teams of 20+ providers across 12+ countries: API contract negotiation, staging debugging, escalating provider-side bugs">Взаимодействие с техническими командами 20+ провайдеров из 12+ стран: согласование API-контрактов, отладка на стейдже, эскалация багов на стороне провайдера</li>
+            <li data-ru="Адаптация новой функциональности под legacy-архитектуру (10+ лет): встраивание в существующие паттерны без глобального рефакторинга"
+                data-en="Adapting new features to legacy architecture (10+ years old): fitting into existing patterns without global refactoring">Адаптация новой функциональности под legacy-архитектуру (10+ лет): встраивание в существующие паттерны без глобального рефакторинга</li>
+            <li data-ru="Расследование и устранение production-инцидентов: анализ логов, воспроизведение на стейдже, hotfix в тот же день"
+                data-en="Production incident investigation and resolution: log analysis, staging reproduction, same-day hotfixes">Расследование и устранение production-инцидентов: анализ логов, воспроизведение на стейдже, hotfix в тот же день</li>
+            <li data-ru="Менторинг product-менеджера по техническим вопросам API-интеграций"
+                data-en="Mentoring product manager on technical aspects of API integrations">Менторинг product-менеджера по техническим вопросам API-интеграций</li>
           </ul>
-          <p style="margin-top:8px; font-size:13px; color:#718096;"><b>Stack:</b> Ruby on Rails, MySQL, Redis, ElasticSearch, Docker, Faraday, Savon, Capistrano, GitLab CI, RSpec</p>
+
+          <!-- Achievements -->
+          <div class="subsection-title" data-ru="Достижения" data-en="Achievements">Достижения</div>
+          <ul>
+            <li data-ru="Подключил 20+ провайдеров (REST и SOAP API) в 12+ странах — каждый со своим протоколом, форматом данных и бизнес-логикой"
+                data-en="Integrated 20+ providers (REST and SOAP APIs) across 12+ countries — each with unique protocol, data format, and business logic">Подключил 20+ провайдеров (REST и SOAP API) в 12+ странах — каждый со своим протоколом, форматом данных и бизнес-логикой</li>
+            <li data-ru="Создал фреймворк интеграции (Gateway, Request, Transformer, Rate) — сократил время подключения нового провайдера с 3–4 недель до 1 недели"
+                data-en="Built integration framework (Gateway, Request, Transformer, Rate) — reduced new provider onboarding from 3–4 weeks to 1 week">Создал фреймворк интеграции (Gateway, Request, Transformer, Rate) — сократил время подключения нового провайдера с 3–4 недель до 1 недели</li>
+            <li data-ru="Разработал систему мерджинга тарифов от 50+ провайдеров с внутренним каталогом из 5 000+ автомобилей (цены, депозиты, франшизы, доп. услуги)"
+                data-en="Developed rate merging system for 50+ providers with internal catalog of 5,000+ cars (pricing, deposits, franchises, extras)">Разработал систему мерджинга тарифов от 50+ провайдеров с внутренним каталогом из 5 000+ автомобилей (цены, депозиты, франшизы, доп. услуги)</li>
+            <li data-ru="Нашёл и устранил баг конкурентного доступа к Redis-токенам — бронирования создавались с чужими датами при параллельных поисках (~50 запросов/сек)"
+                data-en="Found and fixed Redis token concurrency bug — bookings were created with wrong dates during parallel searches (~50 req/sec)">Нашёл и устранил баг конкурентного доступа к Redis-токенам — бронирования создавались с чужими датами при параллельных поисках (~50 запросов/сек)</li>
+            <li data-ru="Реализовал Redis-кеширование токенов авторизации и результатов поиска — снижение нагрузки на API провайдеров на 40%"
+                data-en="Implemented Redis caching for auth tokens and search results — reduced provider API load by 40%">Реализовал Redis-кеширование токенов авторизации и результатов поиска — снижение нагрузки на API провайдеров на 40%</li>
+            <li data-ru="Внедрил систему настраиваемых таймаутов поиска по 40+ странам — уменьшил количество таймаутов в Греции и Турции на 60%"
+                data-en="Implemented configurable search timeouts across 40+ countries — reduced timeouts in Greece and Turkey by 60%">Внедрил систему настраиваемых таймаутов поиска по 40+ странам — уменьшил количество таймаутов в Греции и Турции на 60%</li>
+            <li data-ru="Разработал систему Telegram-уведомлений о бронированиях с авторизацией, маршрутизацией по 3 группам получателей и форматированием данных из 50+ провайдеров"
+                data-en="Built Telegram booking notification system with auth, routing to 3 recipient groups, and data formatting from 50+ providers">Разработал систему Telegram-уведомлений о бронированиях с авторизацией, маршрутизацией по 3 группам получателей и форматированием данных из 50+ провайдеров</li>
+            <li data-ru="Создал микросервис деплой-уведомлений (Ruby + Docker): автоматический changelog из GitLab API, группировка по MR, отправка в Telegram"
+                data-en="Created deploy notification microservice (Ruby + Docker): auto-changelog from GitLab API, MR grouping, Telegram delivery">Создал микросервис деплой-уведомлений (Ruby + Docker): автоматический changelog из GitLab API, группировка по MR, отправка в Telegram</li>
+            <li data-ru="Настроил dev-среду legacy Ruby 2.3 / Rails 4 на ARM (Apple Silicon) через Docker + QEMU для всей команды (10 чел.) — кросс-компиляция, кастомная сборка образов, интеграция с дебаггером RubyMine"
+                data-en="Set up legacy Ruby 2.3 / Rails 4 dev environment on ARM (Apple Silicon) via Docker + QEMU for the entire team (10 people) — cross-compilation, custom image builds, RubyMine debugger integration">Настроил dev-среду legacy Ruby 2.3 / Rails 4 на ARM (Apple Silicon) через Docker + QEMU для всей команды (10 чел.) — кросс-компиляция, кастомная сборка образов, интеграция с дебаггером RubyMine</li>
+            <li data-ru="Интегрировал ElasticSearch (Chewy) для полнотекстового поиска по каталогу из 5 000+ автомобилей и 2 000+ локаций"
+                data-en="Integrated ElasticSearch (Chewy) for full-text search across 5,000+ cars and 2,000+ locations catalog">Интегрировал ElasticSearch (Chewy) для полнотекстового поиска по каталогу из 5 000+ автомобилей и 2 000+ локаций</li>
+          </ul>
+
+          <p style="margin-top:8px; font-size:12px; color:#718096;"><b>Stack:</b> Ruby on Rails 4, MySQL, Redis, ElasticSearch, Docker, Faraday, Savon, Capistrano, GitLab CI/CD, RSpec, Telegram Bot API</p>
         </div>
 
         <!-- Schlumberger -->
@@ -160,13 +190,14 @@
             <span class="job-title">Field Specialist / SAP Consultant — Schlumberger</span>
             <span class="job-period">2017 — 2020</span>
           </div>
-          <div class="job-company" data-ru="Подразделение Artificial Lift (механизированная добыча нефти)"
-               data-en="Artificial Lift division (oil production)">Подразделение Artificial Lift (механизированная добыча нефти)</div>
+          <div class="job-company" data-ru="Подразделение Artificial Lift (механизированная добыча). Международная нефтесервисная компания, 80 000+ сотрудников."
+               data-en="Artificial Lift division. International oilfield services company, 80,000+ employees.">
+            Подразделение Artificial Lift (механизированная добыча). Международная нефтесервисная компания, 80 000+ сотрудников.</div>
           <ul>
-            <li data-ru="Работа с SAP ERP для управления жизненным циклом нефтегазового оборудования"
-                data-en="SAP ERP for oil & gas equipment lifecycle management">Работа с SAP ERP для управления жизненным циклом нефтегазового оборудования</li>
-            <li data-ru="Разработка кастомных отчётов и обработки данных на ABAP"
-                data-en="Custom reports and data processing in ABAP">Разработка кастомных отчётов и обработки данных на ABAP</li>
+            <li data-ru="Сопровождение SAP ERP для 500+ единиц оборудования механизированной добычи"
+                data-en="SAP ERP support for 500+ artificial lift equipment units">Сопровождение SAP ERP для 500+ единиц оборудования механизированной добычи</li>
+            <li data-ru="Разработка кастомных ABAP-отчётов для автоматизации логистических процессов — сокращение ручной обработки на 30%"
+                data-en="Custom ABAP reports for logistics automation — reduced manual processing by 30%">Разработка кастомных ABAP-отчётов для автоматизации логистических процессов — сокращение ручной обработки на 30%</li>
           </ul>
         </div>
 
@@ -177,8 +208,8 @@
             <span class="job-period">2013 — 2015</span>
           </div>
           <ul>
-            <li data-ru="Система ERP SAP: модули LO, SD, MM"
-                data-en="SAP ERP system: LO, SD, MM modules">Система ERP SAP: модули LO, SD, MM</li>
+            <li data-ru="Внедрение и сопровождение SAP ERP (модули LO, SD, MM) для 200+ пользователей"
+                data-en="SAP ERP implementation and support (LO, SD, MM modules) for 200+ users">Внедрение и сопровождение SAP ERP (модули LO, SD, MM) для 200+ пользователей</li>
           </ul>
         </div>
       </div>
@@ -186,19 +217,24 @@
       <!-- EDUCATION -->
       <div class="section">
         <div class="section-title" data-ru="Образование" data-en="Education">Образование</div>
-        <p data-ru="<b>Альметьевский государственный нефтяной институт</b><br>Автоматизация технологических процессов и производств"
-           data-en="<b>Almetyevsk State Oil Institute</b><br>Automation of Technological Processes and Production">
-          <b>Альметьевский государственный нефтяной институт</b><br>Автоматизация технологических процессов и производств
+        <p data-ru="<b>Высшее техническое образование</b><br>Специальность: Автоматизация технологических процессов и производств"
+           data-en="<b>Higher Technical Education</b><br>Major: Automation of Technological Processes and Production">
+          <b>Высшее техническое образование</b><br>Специальность: Автоматизация технологических процессов и производств
         </p>
       </div>
 
       <!-- LANGUAGES -->
       <div class="section">
         <div class="section-title" data-ru="Языки" data-en="Languages">Языки</div>
-        <p data-ru="Русский — родной | Английский — чтение технической документации"
-           data-en="Russian — native | English — technical reading (documentation, API specs)">
-          Русский — родной | Английский — чтение технической документации
+        <p data-ru="Русский — родной | Английский — чтение технической документации, переписка с провайдерами"
+           data-en="Russian — native | English — technical documentation, written communication with providers">
+          Русский — родной | Английский — чтение технической документации, переписка с провайдерами
         </p>
+      </div>
+
+      <!-- KEYWORDS (hidden on print, visible for ATS) -->
+      <div class="keywords">
+        Ruby, Ruby on Rails, RoR, Backend, API Integration, REST, SOAP, XML, JSON, Redis, MySQL, PostgreSQL, ElasticSearch, Docker, CI/CD, GitLab, RSpec, TDD, Sidekiq, Capistrano, Faraday, Savon, JWT, OAuth, Telegram Bot, Linux, Nginx, SAP, ABAP, Agile, Remote, Legacy Code, Refactoring, Microservices, Monolith, Concurrency, Caching, Full-stack, DevOps
       </div>
 
     </div>
