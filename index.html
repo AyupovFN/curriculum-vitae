@@ -26,6 +26,9 @@
     .lang-switch button { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 13px; }
     .lang-switch button.active { background: rgba(255,255,255,0.35); font-weight: 600; }
     .lang-switch button:hover { background: rgba(255,255,255,0.25); }
+    .download-btn { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; background: #fff; color: #2c5282; padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background 0.15s, transform 0.15s; }
+    .download-btn:hover { background: #ebf2fb; transform: translateY(-1px); }
+    .download-btn i { font-size: 15px; }
     .content { padding: 30px 40px 40px; }
     .section { margin-bottom: 24px; }
     .section-title { font-size: 14px; font-weight: 700; color: #2c5282; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; margin-bottom: 12px; }
@@ -42,13 +45,29 @@
     .skills-grid { display: flex; flex-wrap: wrap; gap: 5px 8px; }
     .skill-tag { font-size: 12px; background: #edf2f7; color: #2d3748; padding: 2px 8px; border-radius: 4px; }
     .summary-text { font-size: 13.5px; color: #4a5568; }
-    .keywords { font-size: 12px; color: #a0aec0; margin-top: 16px; line-height: 1.4; }
+    .keywords { font-size: 12px; color: #718096; margin-top: 16px; line-height: 1.4; }
     @media print {
-      body { background: #fff; }
+      body { background: #fff; line-height: 1.45; }
       .page { box-shadow: none; margin: 0; border-radius: 0; }
       .lang-switch { display: none; }
-      .keywords { display: none; }
+      .download-btn { display: none; }
+      .keywords { display: block; }
+      .header { padding: 22px 40px; }
+      .content { padding: 18px 40px 22px; }
+      .section { margin-bottom: 13px; }
+      .job { margin-bottom: 11px; }
+      .section-title { margin-bottom: 7px; padding-bottom: 4px; }
+      .subsection-title { margin: 6px 0 4px; }
+      .job-scale { margin-bottom: 6px; }
+      .section li { margin-bottom: 2px; }
+      .pdf-keywords-title { margin: 14px 0 7px !important; }
     }
+    .pdf-keywords-title {
+      font-size: 14px; font-weight: 700; color: #2c5282;
+      text-transform: uppercase; letter-spacing: 1px;
+      border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; margin: 24px 0 12px;
+    }
+    .keywords { line-height: 1.6; }
     @media (max-width: 600px) {
       .header { flex-direction: column; text-align: center; padding: 25px; }
       .header-contacts { justify-content: center; }
@@ -72,6 +91,7 @@
         <h1 data-ru="Фархат Аюпов" data-en="Farkhat Ayupov">Фархат Аюпов</h1>
         <h2>Ruby on Rails Backend Developer</h2>
         <div class="header-contacts">
+          <span><i class="fa fa-envelope"></i><a href="mailto:ayupovfn@gmail.com">ayupovfn@gmail.com</a></span>
           <span><i class="fa fa-telegram"></i><a href="https://t.me/afn1187">@afn1187</a></span>
           <span><i class="fa fa-github"></i><a href="https://github.com/AyupovFN">AyupovFN</a></span>
           <span><i class="fa fa-map-marker"></i>
@@ -79,6 +99,9 @@
           </span>
           <span><i class="fa fa-clock-o"></i>UTC+1</span>
         </div>
+        <a id="download-pdf" class="download-btn" href="Farkhat_Ayupov_CV_RU.pdf" download>
+          <i class="fa fa-download"></i><span data-ru="Скачать PDF" data-en="Download PDF">Скачать PDF</span>
+        </a>
       </div>
     </div>
 
@@ -232,7 +255,8 @@
         </p>
       </div>
 
-      <!-- KEYWORDS (hidden on print, visible for ATS) -->
+      <!-- KEYWORDS (visible — important for ATS / HR search) -->
+      <div class="pdf-keywords-title" data-ru="Ключевые навыки" data-en="Key Skills">Ключевые навыки</div>
       <div class="keywords">
         Ruby, Ruby on Rails, RoR, Backend, API Integration, REST, SOAP, XML, JSON, Redis, MySQL, PostgreSQL, ElasticSearch, Docker, CI/CD, GitLab, RSpec, TDD, Sidekiq, Capistrano, Faraday, Savon, JWT, OAuth, Telegram Bot, Linux, Nginx, SAP, ABAP, Agile, Remote, Legacy Code, Refactoring, Microservices, Monolith, Concurrency, Caching, Full-stack, DevOps
       </div>
@@ -247,6 +271,7 @@
       });
       document.getElementById('btn-ru').className = lang === 'ru' ? 'active' : '';
       document.getElementById('btn-en').className = lang === 'en' ? 'active' : '';
+      document.getElementById('download-pdf').href = 'Farkhat_Ayupov_CV_' + lang.toUpperCase() + '.pdf';
       document.documentElement.lang = lang;
     }
   </script>
